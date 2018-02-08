@@ -1,0 +1,11 @@
+option name = "viperfser";
+option app_label = "viperfser";
+
+message VIPSService (Service){
+    option verbose_name = "Iperf server Service";
+}
+
+message VIPSServiceInstance (TenantWithContainer){
+     option verbose_name = "Iperf Server Service Instance";
+     required string tenant_message = 1 [help_text = "Tenant Message to Display", max_length = 254, null = False, db_index = False, blank = False];
+}
